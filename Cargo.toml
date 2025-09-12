@@ -1,0 +1,43 @@
+[package]
+name = "winjet"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+directories = "6.0.0"
+
+iced = { version = "0.14.0-dev", features = ["tokio", "sipper", "advanced"] }
+iced_aw = { version = "0.13.0-dev", default-features = false, features = [
+  "tabs",
+  "spinner",
+] }
+iced_fonts = { version = "0.3.0-dev", features = ["nerd", "advanced_text"] }
+
+kvm-ioctls = "0.24.0"
+
+tokio = { version = "1.47.1", features = ["rt", "rt-multi-thread"] }
+bollard = "0.19.2"
+
+surrealdb = { version = "2.3.7", default-features = false, features = [
+  "kv-surrealkv",
+] }
+surrealdb-extras = { git = "https://github.com/tukanoidd/surrealdb-extras" }
+
+derive_more = { version = "2.0.1", features = ["deref", "deref_mut", "as_ref"] }
+pastey = "0.1.1"
+smart-default = "0.7.1"
+
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.143"
+
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["env-filter"] }
+
+color-eyre = "0.6.5"
+
+[patch.crates-io]
+iced = { git = "https://github.com/iced-rs/iced.git", rev = "04639a4" }
+iced_core = { git = "https://github.com/iced-rs/iced.git", rev = "04639a4" }
+iced_widget = { git = "https://github.com/iced-rs/iced.git", rev = "04639a4" }
+iced_aw = { git = "https://github.com/iced-rs/iced_aw.git", rev = "4f52ad6" }
+iced_fonts = { git = "https://github.com/redhawk18/iced_fonts.git", rev = "31970b2" }
