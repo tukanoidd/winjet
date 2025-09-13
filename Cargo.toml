@@ -1,3 +1,7 @@
+[workspace]
+members = ["winjet-gt"]
+resolver = "3"
+
 [package]
 name = "winjet"
 version = "0.1.0"

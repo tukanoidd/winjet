@@ -1,0 +1,11 @@
+cargo-features = ["per-package-target"]
+
+[package]
+name = "winjet-gt"
+version = "0.1.0"
+edition = "2024"
+forced-target = "x86_64-pc-windows-msvc"
+
+
+[dependencies]
+windows-service = "0.8.0"
